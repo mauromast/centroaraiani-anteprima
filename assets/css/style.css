@@ -1,6 +1,6 @@
 /* Centro Diagnostico Ara Iani — foglio di stile principale */
 :root{
-  --blu:#0b4f6c; --blu-2:#0e6a8f; --blu-scuro:#08354a; --teal:#12a4a0; --teal-chiaro:#e3f6f5;
+  --blu:#005480; --blu-2:#1a6a94; --blu-scuro:#003a5a; --teal:#3f7a99; --teal-chiaro:#e6f0f5;
   --arancio:#f08a24; --arancio-scuro:#d9731a; --sabbia:#fff7ee;
   --testo:#1d2b36; --testo-2:#4a5b68; --bordo:#dce5ea; --sfondo:#f5f9fb; --bianco:#fff;
   --r:14px; --r-lg:22px; --ombra:0 6px 24px rgba(11,79,108,.10); --ombra-forte:0 14px 40px rgba(11,79,108,.18);
@@ -38,7 +38,9 @@ ul,ol{padding-left:1.25em}
 .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--bordo)}
 .header .container{display:flex;align-items:center;justify-content:space-between;min-height:74px;gap:16px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--blu-scuro)}
-.logo svg{width:46px;height:46px}
+.logo img{height:54px;width:auto;display:block}
+.logo-since{font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);line-height:1.15;border-left:2px solid var(--teal-chiaro);padding-left:10px}
+.logo-footer img{height:56px}
 .logo strong{display:block;font-size:1.18rem;letter-spacing:.02em;line-height:1.1}
 .logo small{display:block;font-size:.74rem;color:var(--testo-2);letter-spacing:.06em;text-transform:uppercase}
 .nav{display:flex;align-items:center;gap:4px}
@@ -75,14 +77,14 @@ ul,ol{padding-left:1.25em}
   body.menu-open{overflow:hidden}
 }
 @media (min-width:1081px){.nav-close{display:none}}
-@media (max-width:520px){.header-cta .btn{padding:9px 14px;font-size:.88rem}.logo small{display:none}}
+@media (max-width:520px){.header-cta .btn{padding:9px 14px;font-size:.88rem}.logo img{height:40px}.logo-since{display:none}}
 
 /* Hero */
 .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#eaf6f9 0%,#f6fbfc 45%,#fff3e6 100%)}
 .hero .container{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:56px;padding-bottom:64px}
 .hero p.lead{font-size:1.18rem;color:var(--testo-2);max-width:40em}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--bordo);padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:700;color:var(--blu);margin-bottom:18px}
-.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(18,164,160,.18)}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(78,135,165,.18)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 22px}
 .hero-badges{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:.92rem;color:var(--testo-2);list-style:none;padding:0;margin:0}
 .hero-badges li{display:flex;align-items:center;gap:6px}
@@ -155,7 +157,7 @@ a.card:hover{box-shadow:var(--ombra-forte);transform:translateY(-3px)}
 .photo-stack .tall{grid-row:span 2}
 .checklist{list-style:none;padding:0;margin:0 0 1em}
 .checklist li{position:relative;padding-left:32px;margin-bottom:10px}
-.checklist li::before{content:"";position:absolute;left:0;top:.3em;width:20px;height:20px;border-radius:50%;background:var(--teal-chiaro) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2312a4a0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/13px no-repeat}
+.checklist li::before{content:"";position:absolute;left:0;top:.3em;width:20px;height:20px;border-radius:50%;background:var(--teal-chiaro) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233f7a99' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/13px no-repeat}
 
 /* Orari */
 .hours{list-style:none;margin:0;padding:0}
@@ -217,7 +219,7 @@ tr:last-child td{border-bottom:0}
 /* Esami catalogo */
 .search-box{position:relative;max-width:620px;margin:0 auto 26px}
 .search-box input{width:100%;padding:16px 20px 16px 52px;border-radius:999px;border:2px solid var(--bordo);font-size:1.05rem;font-family:inherit}
-.search-box input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(18,164,160,.15)}
+.search-box input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(78,135,165,.15)}
 .search-box .icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:22px;height:22px;color:var(--testo-2)}
 .az{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:24px}
 .az a{width:36px;height:36px;display:grid;place-items:center;border-radius:10px;background:#fff;border:1px solid var(--bordo);text-decoration:none;font-weight:700;color:var(--blu)}
@@ -247,7 +249,7 @@ tr:last-child td{border-bottom:0}
 @media (max-width:640px){.form .row{grid-template-columns:1fr}}
 .form label{font-weight:600;font-size:.92rem;display:block;margin-bottom:6px}
 .form input,.form textarea,.form select{width:100%;padding:13px 15px;border:1.5px solid var(--bordo);border-radius:12px;font:inherit;background:#fff}
-.form input:focus,.form textarea:focus,.form select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(18,164,160,.13)}
+.form input:focus,.form textarea:focus,.form select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(78,135,165,.13)}
 .form textarea{min-height:150px;resize:vertical}
 .form .check{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;font-weight:400}
 .form .check input{width:auto;margin-top:4px}
